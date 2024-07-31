@@ -1,0 +1,39 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+
+{
+    "title": 7888,
+    "details": "evento de test 222",
+    "maximumAttendees": 1
+}
+
+
+###
+
+POST http://localhost:3333/events/4256dd3e-5ba1-4655-81a0-55b717f15cb7/attendees
+Content-Type: application/json
+
+{
+    "name": "Luciano Horta",
+    "email": "Luciano2.auad@gmail.com"
+}
+
+
+###
+
+GET http://localhost:3333/events/4256dd3e-5ba1-4655-81a0-55b717f15cb7
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+
+###
+
+GET http://localhost:3333/attendees/7/check-in
+
+
+###
+
+GET http://localhost:3333/event/9639a66d-77ef-459d-9462-9010ccd4a6c6/attendees?query=luciano
